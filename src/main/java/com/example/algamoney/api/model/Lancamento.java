@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "lancamento")
 public class Lancamento {
 
-	@Id  // referencia-se ao ID.
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
@@ -30,20 +30,20 @@ public class Lancamento {
 	@Column(name = "data_vencimento")
 	private LocalDate dataVencimento;
 
-	@Column(name = "data_pagamento") // referencia-se à coluna do Banco de Dados do atributo em questão.
+	@Column(name = "data_pagamento")
 	private LocalDate dataPagamento;
 
-	@NotNull // não obrigatório
+	@NotNull
 	private BigDecimal valor;
 
 	private String observacao;
 
 	@NotNull
-	@Enumerated(EnumType.STRING) // teria a opção ORDINAL (0 ou 1), mas STRING salvaria o nome (RECEITA ou DESPESA).
+	@Enumerated(EnumType.STRING)
 	private TipoLancamento tipo;
 
 	@NotNull
-	@ManyToOne // muitos pra um
+	@ManyToOne
 	@JoinColumn(name = "codigo_categoria")
 	private Categoria categoria;
 
