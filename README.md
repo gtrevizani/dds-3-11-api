@@ -1,3 +1,3 @@
 # dds-3-11-api
 
-Projeto API utilizando Spring Boot Rest em conjunto com MySQL, realizado na sala de aula de Cibersegurança do SENAI Vitória. Também utilizado para realizar requisições com Postman.
+Projeto Java Spring REST API, utilizando o framework Spring Boot, SGBD MySQL Workbench em conjunto com o Postman para teste de requisições.
